@@ -1,0 +1,13 @@
+Indonesian Sign Language Detector (YOLO12)
+Copyright (c) 2025 DISTHORC
+
+Licensed under the Apache License, Version 2.0.
+
+This NOTICE file is provided for compliance with Section 4(d) of the Apache License 2.0.
+
+Components:
+- Project source code (realtime pipeline, scripts, tracking, smoothing): Apache-2.0.
+- Ultralytics YOLO (runtime dependency) -- see https://github.com/ultralytics/ultralytics for its license (AGPL/commercial options). Not bundled; imported at runtime.
+- Other Python dependencies retain their respective upstream licenses.
+
+No trademark rights are granted. If you redistribute a modified version, retain this NOTICE and indicate changes.

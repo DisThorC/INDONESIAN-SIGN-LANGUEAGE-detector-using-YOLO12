@@ -122,7 +122,9 @@ python .\scripts\per_class_thresholds.py --weights runs\train\exp_y12s_50e_640\w
 
 ---
 ## License
-MIT — see `LICENSE`.
+Apache License 2.0 — see `LICENSE`. Patent grant included (Section 3).
+
+NOTICE file lists third-party components (e.g. Ultralytics YOLO runtime dependency under its own license).
 
 Author: DISTHORC
 
