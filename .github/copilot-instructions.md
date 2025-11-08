@@ -1,3 +1,46 @@
+## Copilot Workspace Instructions
+
+This repository provides a lean realtime Indonesian Sign Language (ISL) detector using a fine‑tuned YOLO12s model (50 epochs). Only essential runtime code plus final weights are tracked.
+
+### Included
+- Realtime scripts and runtime (`realtime.py`, `src/yolo12/*`)
+- Final weights: `runs/train/exp_y12s_50e_640/weights/{best.pt,last.pt}`
+- Configs and lightweight utilities
+
+### Excluded
+- Raw/full datasets and large artifact images
+- Bulk run outputs beyond the two weight files
+
+### Key Runtime Features
+- Threaded webcam capture for lower latency
+- Optional tracker + temporal smoothing
+- Semantic prior + optional Markov decoding
+- Dynamic `imgsz` and frame stride to maintain >20 FPS
+
+### Workflow Rules
+1. If you add/change runtime flags, update the Quick Start section in `README.md`.
+2. Do not commit large media/datasets; `.gitignore` already blocks them.
+3. Keep `requirements.txt` and `pyproject.toml` in sync for new deps.
+4. Add small tests only when logic changes (tracker, smoothing, decoding).
+5. Keep commits focused and descriptive.
+
+### Common Commands
+- Setup venv and install requirements, then:
+- Run realtime: `python run_realtime.py` or `python .\realtime.py --duration 15`
+- Quick CPU sanity train (optional): 1 epoch with reduced `imgsz`
+
+### Optional Future Enhancements
+- Simple latency benchmark across image sizes
+- ONNX/TensorRT export & quantization scripts in a separate branch to keep the footprint small
+
+### Ownership
+Author: DISTHORC. Maintain attribution in README and license headers if files are significantly refactored.
+
+### Principle
+Favor clarity and performance knobs over heavy abstractions; keep it easy to reproduce.
+
+---
+Revise this file if the project scope evolves; keep it concise.
 <!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
 
 	<!-- Ask for project type, language, and frameworks if not specified. Skip if already provided. -->
