@@ -43,3 +43,11 @@ Startup Campus 4 Indonesian Sign Language Detection.v5i.yolov12/
 # OS
 .DS_Store
 Thumbs.db
+
+# CUDA/compiled build artifacts (optional ignore)
+*.i
+*.ii
+*.gpu
+*.ptx
+*.cubin
+*.fatbin
